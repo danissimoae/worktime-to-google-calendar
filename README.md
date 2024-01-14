@@ -3,6 +3,7 @@ Python-скрипт, отправляющий данные рабочей дея
 
 ### Установка
 Установка необходимых библиотек:
+
 `pip install pandas`
 
 `pip install google-auth-oauthlib`
