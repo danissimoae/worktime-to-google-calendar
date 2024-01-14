@@ -25,11 +25,11 @@ Python-скрипт, отправляющий данные рабочей дея
 ### Команды
 Необходимо запустить `main.py` и `createTable.py` (`createTable.py` лишь один раз для создания базы данных). После программа предоставляет следующие функции, выполняющиеся после ввода команд в терминал:
 - Авторизация и добавление события:
-`python script.py add <duration_in_hours> "<event_description>"`
+`python main.py add <duration_in_hours> "<event_description>"`
 Здесь `<duration_in_hours>` - желаемая продолжительность события в часах, а <event_description> - описание события.
 - Запись отработанных часов в базу данных:
-`python script.py commit`
+`python main.py commit`
 - Получение данных о часах за последние `N` дней:
-`python script.py getHours <number_of_days>`
+`python main.py getHours <number_of_days>`
 Где `<number_of_days>` - количество последних дней, за которые вы хотите получить данные.
 При первом запуске программы необходимо создать базу данных с помощью скрипта `createTable.py`. Внутри него происходит установка подключения к базе данных SQLite3, встроенной в python. 
