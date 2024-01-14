@@ -4,8 +4,11 @@ Python-скрипт, отправляющий данные рабочей дея
 ### Установка
 Установка необходимых библиотек:
 `pip install pandas`
+
 `pip install google-auth-oauthlib`
+
 `pip install google-api-python-client`
+
 `pip install python-dateutil`
 
 ### Настройка
