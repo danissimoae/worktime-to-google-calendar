@@ -3,10 +3,10 @@ Python-скрипт, отправляющий данные рабочей дея
 
 ### Установка
 Установка необходимых библиотек:
-`pip install pandas
-pip install google-auth-oauthlib
-pip install google-api-python-client
-pip install python-dateutil`
+`pip install pandas`
+`pip install google-auth-oauthlib`
+`pip install google-api-python-client`
+`pip install python-dateutil`
 
 ### Настройка
 Для начала написания программы необходимо получить JSON-токен от Google. Делается это на странице GoogleAPI (https://console.cloud.google.com/apis/credentials/consent?project=claendarapi&pli=1).
