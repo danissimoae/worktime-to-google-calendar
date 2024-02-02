@@ -1,5 +1,9 @@
 # worktime-to-google-calendar
+# Python-script that sends work activity data to your Google calendar, database, Excel spreadsheet.
 Python-скрипт, отправляющий данные рабочей деятельности в ваш гугл-календарь, БД, Excel-таблицу.
+
+### Installation
+Installing the necessary libraries:
 
 ### Установка
 Установка необходимых библиотек:
@@ -12,6 +16,17 @@ Python-скрипт, отправляющий данные рабочей дея
 
 `pip install python-dateutil`
 
+
+### Customization
+To start writing a program, you need to get a JSON token from Google. This is done on the Google API page (https://console.cloud.google.com/apis/credentials/consent?project=claendarapi&pli=1).
+
+After that, you need to download the JSON token and copy it to the project folder.
+
+You will also need a unique identifier of the calendar in which the work will be recorded. This is done on the Google Calendar page.
+
+In ``main.py ``enter your token in the variable `CALENDAR_ID`, in the variable `TIMEZONE` select your time zone in the format `Asia/Yekaterinburg`
+
+
 ### Настройка
 Для начала написания программы необходимо получить JSON-токен от Google. Делается это на странице GoogleAPI (https://console.cloud.google.com/apis/credentials/consent?project=claendarapi&pli=1).
 
@@ -20,6 +35,19 @@ Python-скрипт, отправляющий данные рабочей дея
 Также, понадобится уникальный идентификатор календаря, в который будут вноситься учет работы. Делается это на странице Google Calendar.
 
 В ```main.py``` в переменную `CALENDAR_ID` занести ваш токен, в переменной `TIMEZONE` выберите ваш часовой пояс в формате `Asia/Yekaterinburg`.
+
+
+### Commands
+It is necessary to run `main.py ` and `createTable.py ` (`createTable.py `only once to create a database). After that, the program provides the following functions that are performed after entering commands into the terminal:
+- Authorization and adding an event:
+`python main.py ad <duration_in_hours> "<event_description>"`
+Here `<duration_in_hours>` is the desired duration of the event in hours, and <event_description> is the description of the event.
+- Recording hours worked in the database:
+`python main.py commit`
+- Getting clock data for the last `N` days:
+`python main.py getHours <number_of_days>`
+Where `<number_of_days>` is the number of recent days for which you want to receive data.
+The first time you run the program, you need to create a database using a script `createTable.py `. Inside it, a connection is established to the SQLite3 database built into python.
 
 
 ### Команды
